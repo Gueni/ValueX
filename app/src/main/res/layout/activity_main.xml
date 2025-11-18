@@ -1,112 +1,227 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
-    android:background="#f5f5f5">
+    android:background="#0F1014"
+    android:padding="16dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="8dp">
 
-        <!-- App Title -->
-        <TextView
+        <!-- App Header -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ValueX"
-            android:textSize="32sp"
-            android:textColor="#2196F3"
-            android:textStyle="bold"
+            android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginBottom="40dp"
-            android:layout_marginTop="20dp" />
+            android:layout_marginBottom="32dp"
+            android:layout_marginTop="20dp">
 
-        <!-- Salary Input -->
-        <TextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💎 ValueX"
+                android:textSize="36sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Know what things truly cost"
+                android:textSize="14sp"
+                android:textColor="#888888"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- Input Card -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Monthly Salary (TND)"
-            android:textSize="18sp"
-            android:textColor="#333"
-            android:layout_marginBottom="8dp"
-            tools:ignore="HardcodedText" />
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="24dp"
+            android:layout_marginBottom="24dp">
 
-        <EditText
-            android:id="@+id/salaryInput"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="💰 Income &amp; Savings"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Salary Input -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Monthly Salary (TND)"
+                android:textSize="14sp"
+                android:textColor="#CCCCCC"
+                android:layout_marginBottom="4dp" />
+
+            <EditText
+                android:id="@+id/salaryInput"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="2000"
+                android:inputType="numberDecimal"
+                android:background="@drawable/edittext_background"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Balance Input -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Savings Balance (TND) - Optional"
+                android:textSize="14sp"
+                android:textColor="#CCCCCC"
+                android:layout_marginBottom="4dp" />
+
+            <EditText
+                android:id="@+id/balanceInput"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="5000"
+                android:inputType="numberDecimal"
+                android:background="@drawable/edittext_background"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Working Hours Input -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Monthly Working Hours"
+                android:textSize="14sp"
+                android:textColor="#CCCCCC"
+                android:layout_marginBottom="4dp" />
+
+            <EditText
+                android:id="@+id/hoursInput"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="160"
+                android:text="160"
+                android:inputType="numberDecimal"
+                android:background="@drawable/edittext_background"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+        </LinearLayout>
+
+        <!-- Product Card -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter your monthly salary"
-            android:inputType="numberDecimal"
-            android:background="@drawable/edittext_background"
-            android:padding="15dp"
-            android:layout_marginBottom="20dp"
-            tools:ignore="HardcodedText" />
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="24dp"
+            android:layout_marginBottom="24dp">
 
-        <!-- Product Price Input -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Product Price (TND)"
-            android:textSize="18sp"
-            android:textColor="#333"
-            android:layout_marginBottom="8dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🛍️ Product Info"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
 
-        <EditText
-            android:id="@+id/priceInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter product price"
-            android:inputType="numberDecimal"
-            android:background="@drawable/edittext_background"
-            android:padding="15dp"
-            android:layout_marginBottom="20dp" />
+            <!-- Product Price Input -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product Price (TND)"
+                android:textSize="14sp"
+                android:textColor="#CCCCCC"
+                android:layout_marginBottom="4dp" />
 
-        <!-- Working Hours Input -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Monthly Working Hours"
-            android:textSize="18sp"
-            android:textColor="#333"
-            android:layout_marginBottom="8dp" />
-
-        <EditText
-            android:id="@+id/hoursInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Default: 160 hours"
-            android:text="160"
-            android:inputType="numberDecimal"
-            android:background="@drawable/edittext_background"
-            android:padding="15dp"
-            android:layout_marginBottom="30dp" />
+            <EditText
+                android:id="@+id/priceInput"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="150"
+                android:inputType="numberDecimal"
+                android:background="@drawable/edittext_background"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+        </LinearLayout>
 
         <!-- Calculate Button -->
         <Button
             android:id="@+id/calculateButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Calculate"
-            android:textSize="18sp"
-            android:backgroundTint="#2196F3"
-            android:textColor="#fff"
-            android:padding="15dp"
-            android:layout_marginBottom="30dp" />
+            android:layout_height="55dp"
+            android:text="Calculate True Cost"
+            android:textSize="16sp"
+            android:background="@drawable/button_background"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
 
-        <!-- Result Display -->
-        <TextView
-            android:id="@+id/resultText"
+        <!-- Results Card -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Enter values to calculate"
-            android:textSize="20sp"
-            android:textColor="#333"
-            android:gravity="center"
-            android:padding="20dp"
-            android:background="#e3f2fd"
-            android:textStyle="bold" />
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="24dp"
+            android:layout_marginBottom="40dp"> <!-- Increased bottom margin -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📊 Results"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Time Cost Result -->
+            <TextView
+                android:id="@+id/timeResultText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter values to calculate"
+                android:textSize="16sp"
+                android:textColor="#4CAF50"
+                android:layout_marginBottom="12dp"
+                android:lineSpacingExtra="4dp" />
+
+            <!-- Balance Percentage Result -->
+            <TextView
+                android:id="@+id/balanceResultText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="16sp"
+                android:textColor="#4CAF50"
+                android:lineSpacingExtra="4dp" />
+
+        </LinearLayout>
+
+        <!-- Bottom Spacer - This creates the space after results -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@android:color/transparent" />
 
     </LinearLayout>
 </ScrollView>
